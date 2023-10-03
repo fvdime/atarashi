@@ -11,7 +11,7 @@ const Newsletter = () => {
                   <input type="email" name="email" className="bg-transparent text-slate-950 text-sm rounded-full block w-full p-1.5 pl-4 border border-slate-500 placeholder-slate-400" placeholder="name@company.com" required />
               </div>
               {/* <span className=" border border-slate-950 px-4 py-1.5 rounded-full"></span> */}
-              <button type="submit" className="w-full text-slate-950 hover:bg-slate-950 hover:text-white transition duration-300 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-1.5 text-center ">Subscribe</button>
+              <button type="submit" className="w-full text-slate-950 hover:bg-slate-950 hover:text-white transition duration-500 ease-in focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-1.5 text-center ">Subscribe</button>
           </form>
       </div>
     </div>
