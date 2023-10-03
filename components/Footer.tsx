@@ -18,7 +18,7 @@ const Footer = () => {
               </li>
               <li>
               <span className=" border border-slate-700 px-2 rounded-xl"></span>
-                  <Link href="#"  className="mr-4 md:mr-6 border border-slate-700 px-4 rounded-xl">Contact</Link>
+                  <Link href="#"  className="mr-4 md:mr-6 border border-slate-700 px-4 rounded-xl">Hire me</Link>
               </li>
           </ul>
           </div>
