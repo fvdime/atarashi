@@ -6,18 +6,18 @@ const Navbar = () => {
   const navbarList = [
     {
       id: 1,
-      title: "Processing Control",
-      icon: "→"
+      title: "About Us",
+      icon: "✧"
     },
     {
       id: 2,
       title: "Implements - Works",
-      icon: "→"
+      icon: "✦"
     },
     {
       id: 3,
-      title: "Theoretical Robotics",
-      icon: "→"
+      title: "Our Movement",
+      icon: "✮"
     }
   ]
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
       <nav className="text-slate-950">
           <div className="flex flex-wrap justify-center items-center mx-auto max-w-screen-xl p-4">
               <Link href="/" className="flex items-center">
-                  <span className="self-center text-xl font-semibold whitespace-nowrap uppercase">atarashi</span>
+                  <span className="self-center text-xl font-semibold whitespace-nowrap uppercase">a t a r a s h i</span>
               </Link>
           </div>
       </nav>
@@ -39,7 +39,7 @@ const Navbar = () => {
                           <Link href="#" className="hover:underline">{item.title}</Link>
                           <button 
                           type='button'
-                          className='bg-slate-900 px-0.5 rounded-full text-gray-200 text-xs'>{item.icon}</button>
+                          className='bg-slate-900 px-1 rounded-full text-gray-200 text-sm'>{item.icon}</button>
                         </div>
                       </li>
                       ))}
