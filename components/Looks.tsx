@@ -8,7 +8,7 @@ const Looks = () => {
         <div>
           <h1 className='uppercase font-semibold text-2xl text-center mb-8'>looks</h1>
         </div>
-        <div className='grid grid-cols-4 md:grid-cols-6 gap-4'>
+        <div className='px-4 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4'>
           <LookCard/>
           <LookCard/>
           <LookCard/>

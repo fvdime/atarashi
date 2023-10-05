@@ -1,7 +1,7 @@
-import CollectionJumbotron from '@/components/CollectionJumbotron'
+import CollectionJumbotron from '@/components/Jumbotrons/CollectionJumbotron'
 import Footer from '@/components/Footer'
-import HeroBanner from '@/components/HeroBanner'
-import Navbar from '@/components/Navbar'
+import AboutUs from '@/components/AboutUs'
+import Navbar from '@/components/Navbars/Navbar'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <CollectionJumbotron/>
       <CollectionJumbotron/>
       <CollectionJumbotron/>
-      <HeroBanner/>
+      <AboutUs/>
       <Footer/>
     </>
   )
