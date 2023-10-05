@@ -5,9 +5,10 @@ const SecondaryNavbar = () => {
   return (
     <div>
       <nav className="bg-transparent border-b border-slate-800 text-slate-950">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-start mx-auto p-2">
-          <Link href="/" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap uppercase">a t a r a s h i</span>
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+          <Link href="/" className="flex items-center justify-between w-full">
+            <span className="self-center text-xl font-semibold whitespace-nowrap uppercase">a t a r a s h i i</span>
+            <span className="self-center text-xl font-semibold whitespace-nowrap uppercase">新しい</span>
           </Link>
           {/* <div className="">
             <ul className="font-semibold text-sm flex flex-row">

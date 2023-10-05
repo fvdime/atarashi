@@ -1,5 +1,5 @@
-import CategoryJumbotron from '@/components/CollectionJumbotron'
-import LookBookJumbotron from '@/components/LookbookJumbotron'
+import CategoryJumbotron from '@/components/Jumbotrons/CollectionJumbotron'
+import LookBookJumbotron from '@/components/Jumbotrons/LookbookJumbotron'
 import Looks from '@/components/Looks'
 import React from 'react'
 

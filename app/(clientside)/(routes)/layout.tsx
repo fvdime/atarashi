@@ -1,5 +1,4 @@
-import Footer from '@/components/Footer'
-import SecondaryNavbar from '@/components/SecondaryNavbar'
+import SecondaryNavbar from '@/components/Navbars/SecondaryNavbar'
 import React from 'react'
 
 const ClientLayout = ({children}: {children: React.ReactNode}) => {

@@ -1,0 +1,76 @@
+import React from 'react'
+
+const CreateLookForm = () => {
+  return (
+    <div className="max-w-screen-sm mx-auto p-4">
+      <h1 className="font-bold text-lg my-8">Create New Look</h1>
+      <form className="my-5">
+        <div className="mb-6">
+          <label className="block mb-2 text-sm font-medium text-slate-900">
+            Title
+          </label>
+          <input
+            type="text"
+            className="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5"
+            placeholder="title..."
+            required
+            // onChange={(e) => setTitle(e.target.value)}
+          />
+        </div>
+        <div className="mb-6">
+          <label className="block mb-2 text-sm font-medium text-slate-900 ">
+            Description
+          </label>
+          <textarea className="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5" 
+          // onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="price"
+            className="block mb-2 text-sm font-medium text-slate-900"
+          >
+            Price
+          </label>
+          <div className="flex flex-row mb-6">
+            <span className="flex items-center bg-grey-lighter rounded rounded-r-none px-3 font-bold text-grey-darker">
+              $
+            </span>
+            <input
+              type="number"
+              className="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5"
+              // onChange={(e) => setPrice(e.target.value)}
+            />
+          </div>
+          <div className="mb-6">
+            <label className="block mb-2 text-sm font-medium text-slate-900">
+              Upload file
+            </label>
+            <input
+              className="block w-full text-sm text-slate-900 border border-slate-300 rounded-lg cursor-pointer bg-slate-50 p-2.5"
+              type="file"
+            />
+          </div>
+        </div>
+        <div className="mb-6"> 
+          <label htmlFor="countries" className="block mb-2 text-sm font-medium text-slate-900">Select an collection</label>
+          <select id="countries" className="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5">
+            <option selected>Choose a Collection</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+          </select>
+        </div>
+        <button
+          type="submit"
+          className="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-xl text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+        >
+          Create New Look
+        </button>
+      </form>
+    </div>
+  )
+}
+
+export default CreateLookForm
