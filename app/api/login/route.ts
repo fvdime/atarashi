@@ -1,8 +1,8 @@
 import bcrypt from 'bcrypt';
 import prisma from '@/lib/prisma'
-// import { NextResponse } from 'next/server'
-// import { sign } from 'jsonwebtoken';
-// import {serialize } from 'cookie'
+import { NextResponse } from 'next/server'
+import {generateAccessToken, generateRefreshToken} from '@/lib/utils/helper'
+
 
 const MAX_AGE = 60 * 60 * 24 * 30
 
@@ -24,9 +24,52 @@ export async function POST(req: Request, res: Response) {
 
     const passwordsMatch = await bcrypt.compare(password, user.hashedPassword);
 
-    if (!passwordsMatch) {
+    if (passwordsMatch) {
+      // user.password = undefined
+
+      const accessToken = generateAccessToken({
+        user: {
+          id: user.id,
+          email: user.email
+        }
+      })
+
+      const refreshToken = generateRefreshToken({
+        user: {
+          id: user.id,
+          email: user.email
+        }
+      })
+
+      const response = NextResponse.json({
+        success: true, data: user, token: {accessToken, refreshToken}
+      }, {status: 200})
+
+      const EXP_TIME = 30* 24 * 60 * 60 * 1000;
+
+      response.cookies.set({
+        name: 'accessToken', 
+        value: accessToken,
+        path: '/',
+        expires: Date.now() + EXP_TIME
+      })
+
+      response.cookies.set({
+        name: 'refreshToken', 
+        value: refreshToken,
+        path: '/',
+        expires: Date.now() + EXP_TIME
+      })
+
+      return response
+      
+    } else {
       return NextResponse.json({ message: "Invalid credentials. Please try again!" }, { status: 401 })
     }
+
+    // if (!passwordsMatch) {
+    //   return NextResponse.json({ message: "Invalid credentials. Please try again!" }, { status: 401 })
+    // }
 
     // if (email === process.env.ADMIN_EMAIL || password === process.env.ADMIN_PASSWORD) {
     //   return NextResponse.json({message: "hello admin"}, {status: 200})

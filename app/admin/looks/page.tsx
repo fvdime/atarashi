@@ -25,15 +25,9 @@ const page = () => {
               <td className="flex flex-row">
                 <button
                   type="button"
-                  className="text-slate-700 bg-transparent border border-lime-800 focus:outline-none hover:bg-lime-600  font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 "
+                  className="text-slate-900 bg-transparent border border-slate-900 focus:outline-none hover:bg-slate-900 transition-all duration-300 ease-in hover:text-gray-200 font-semibold text-xs px-5 py-2.5 mr-2 mb-2"
                 >
-                  Update
-                </button>
-                <button
-                  type="button"
-                  className="text-slate-900 bg-transparent border border-red-800 focus:outline-none hover:bg-red-600 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 "
-                >
-                  Delete
+                  Details
                 </button>
               </td>
             </tr>
@@ -45,7 +39,7 @@ const page = () => {
         >
           <button
             type="button"
-            className="text-slate-700 bg-transparent border border-slate-600 focus:outline-none hover:bg-slate-500 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 "
+            className="text-slate-900 bg-transparent border border-slate-900 focus:outline-none hover:bg-slate-900 transition-all duration-300 ease-in hover:text-gray-200 font-semibold text-xs px-5 py-2.5 mr-2 mb-2"
           >
             Add New Look
           </button>

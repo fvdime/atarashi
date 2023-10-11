@@ -63,11 +63,11 @@ const CreateLookForm = () => {
           </select>
         </div>
         <button
-          type="submit"
-          className="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-xl text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-        >
-          Create New Look
-        </button>
+            type="button"
+            className="text-slate-900 bg-transparent border border-slate-900 focus:outline-none hover:bg-slate-900 transition-all duration-300 ease-in hover:text-gray-200 font-semibold text-xs px-5 py-2.5 mr-2 mb-2"
+          >
+            Create New Look
+          </button>
       </form>
     </div>
   )
