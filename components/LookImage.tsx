@@ -1,15 +1,52 @@
 "use client"
 import Image from "next/image";
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import DatePicker from "./DatePicker";
+import {Appointments} from '@prisma/client'
+import {eachDayOfInterval} from 'date-fns'
 
 
-const LookImage = () => {
+const initialDateRange = {
+  startDate: new Date(),
+  endDate: new Date(),
+  key: 'selection'
+}
+
+interface LookProps {
+  appointments?: Appointments[],
+}
+
+
+const LookImage = ({appointments = []}: LookProps) => {
 
   const [selectedImage, setSelectedImage] = useState(0);
 
   const data = ["/chanel-2.webp","/chanel.webp"];
 
+  const disabledDates = useMemo(() => {
+    let dates: Date[] = []
+
+    appointments.forEach((appointments) => {
+      const range = eachDayOfInterval({
+        start: new Date(appointments.startDate),
+        end: new Date(appointments.endDate),
+      })
+
+      dates = [...dates, ...range]
+    })
+
+    return dates
+  }, [appointments])
+
+  const [loading, setLoading] = useState(false)
+  const [dateRange, setDateRange] = useState(initialDateRange)
+
+  // const onCreateAppointment = useCallback(() => {
+  //     setLoading(true)
+
+
+  //   },[],)
+  
   return (
     <div>
       <div className='grid md:grid-cols-2 grid-cols-1 gap-4 text-slate-950'>

@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <>
       <Navbar/>
+      <div> </div>
       <CollectionJumbotron/>
       <CollectionJumbotron/>
       <CollectionJumbotron/>

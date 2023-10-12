@@ -4,8 +4,6 @@ import { NextResponse } from 'next/server'
 import {generateAccessToken, generateRefreshToken} from '@/lib/utils/helper'
 
 
-const MAX_AGE = 60 * 60 * 24 * 30
-
 export async function POST(req: Request, res: Response) {
   try {
     const body = await req.json()
@@ -61,8 +59,7 @@ export async function POST(req: Request, res: Response) {
         expires: Date.now() + EXP_TIME
       })
 
-      return response
-      
+      return response      
     } else {
       return NextResponse.json({ message: "Invalid credentials. Please try again!" }, { status: 401 })
     }
@@ -91,7 +88,7 @@ export async function POST(req: Request, res: Response) {
 
     // return new Response(JSON.stringify(res), {status: 200, headers: {'Set-Cookie': serialized}})
 
-    return NextResponse.json({ message: 'Logged in successfully!' }, { status: 201 })
+    // return NextResponse.json({ message: 'Logged in successfully!' }, { status: 201 })
   } catch (error) {
     return NextResponse.json({ message: "Server error, please try again" }, { status: 500 })
   }

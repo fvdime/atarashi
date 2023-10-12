@@ -1,6 +1,12 @@
-import React from 'react'
+"use client"
+
+import { useState } from "react"
+import ImageUpload from "./ImageUpload"
 
 const CreateLookForm = () => {
+
+  const [value, setValue] = useState('')
+
   return (
     <div className="max-w-screen-sm mx-auto p-4">
       <h1 className="font-bold text-lg my-8">Create New Look</h1>
@@ -43,13 +49,10 @@ const CreateLookForm = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-slate-900">
-              Upload file
-            </label>
-            <input
-              className="block w-full text-sm text-slate-900 border border-slate-300 rounded-lg cursor-pointer bg-slate-50 p-2.5"
-              type="file"
-            />
+            <ImageUpload 
+              value={value}
+              onChange={(value) => setValue(value)}
+              />
           </div>
         </div>
         <div className="mb-6"> 
