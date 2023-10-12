@@ -1,6 +1,12 @@
-import React from 'react'
+"use client"
+
+import { useState } from "react"
+import ImageUpload from "./ImageUpload"
 
 const CreateCollectionForm = () => {
+
+  const [value, setValue] = useState('')
+
   return (
     <div className="max-w-screen-sm mx-auto">
     <form className="mx-auto space-y-4 md:space-y-6">
@@ -36,14 +42,11 @@ const CreateCollectionForm = () => {
           // onChange={(e) => setCategory(e.target.value)}
         />
       </div>
-      <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-gray-900">
-              Upload file
-            </label>
-            <input
-              className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 p-2.5"
-              type="file"
-            />
+          <div className="mb-6">
+            <ImageUpload 
+              value={value}
+              onChange={(value) => setValue(value)}
+              />
           </div>
           <button
             type="button"

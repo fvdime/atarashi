@@ -21,9 +21,6 @@ const AppointmentsTable = () => {
               <th scope="col" className="px-6 py-3 text-slate-950">
                 Date
               </th>
-              <th scope="col" className="px-6 py-3 text-slate-950">
-                Action
-              </th>
             </tr>
         </thead>
         <tbody>
@@ -44,9 +41,6 @@ const AppointmentsTable = () => {
                 17.12.2023
               </div>
             </td>
-            <td className="px-6 py-4">
-              <Link href="#" className="font-medium text-sky-600 hover:underline">Edit</Link>
-            </td>
           </tr>
         </tbody>
         <tbody>
@@ -67,9 +61,6 @@ const AppointmentsTable = () => {
                 17.12.2023
               </div>
             </td>
-            <td className="px-6 py-4">
-              <Link href="#" className="font-medium text-sky-600 hover:underline">Edit</Link>
-            </td>
           </tr>
         </tbody>
         <tbody>
@@ -89,9 +80,6 @@ const AppointmentsTable = () => {
               <div className="flex items-center">
                 17.12.2023
               </div>
-            </td>
-            <td className="px-6 py-4">
-              <Link href="#" className="font-medium text-sky-600 hover:underline">Edit</Link>
             </td>
           </tr>
         </tbody>
